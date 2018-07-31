@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Review Temp</title>
+    <title>Review Temp</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
- 	<h1>MovieName</h1>
-	<li><a href="index.html"> Home</a></li>
-	<li><a href="LINK"> Reviews</a></li>
- 	<hr>
- 	<hr>
- 	<p>written by: (Name)</p>
- 	<br>
- 	<p>
- 	<br>
-	Luctus accumsan tortor posuere ac ut consequat semper viverra. Mi in nulla posuere sollicitudin aliquam ultrices. Suspendisse sed nisi lacus sed. Nisl pretium fusce id velit ut tortor pretium viverra suspendisse. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Pretium aenean pharetra magna ac. Turpis egestas integer eget aliquet nibh praesent. Vulputate odio ut enim blandit volutpat maecenas. Volutpat odio facilisis mauris sit. Ut venenatis tellus in metus. Quisque sagittis purus sit amet volutpat consequat mauris. Auctor neque vitae tempus quam pellentesque nec. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Nisi lacus sed viverra tellus in hac habitasse platea. Dignissim suspendisse in est ante in nibh mauris cursus mattis. Sit amet mattis vulputate enim nulla. A erat nam at lectus urna duis convallis convallis tellus. Sed vulputate odio ut enim blandit volutpat maecenas.</p>
-	<p id="criticScore">Score Given:</p>
-	<br><br>
+    <h1>MovieName</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Movie Reviews</a>
+        <div class="dropdown-content">
+          <a href="reviewPage2.html">Incredibles 2</a>
+          <a href="reviewPage.html">Mission Impossible</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+    </ul>  
+    <br><br><br><br>
+    <hr>
+    <img src="incredibles2.jpg" alt="incredibles 2 movie poster"">
+    <hr>
+    <p><i>blurb</i></p>
+    <p>written by: (Name)</p>
+    <br>
+    <p>
+    <br>
+    Luctus accumsan tortor posuere ac ut consequat semper viverra. Mi in nulla posuere sollicitudin aliquam ultrices. Suspendisse sed nisi lacus sed. Nisl pretium fusce id velit ut tortor pretium viverra suspendisse. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Pretium aenean pharetra magna ac. Turpis egestas integer eget aliquet nibh praesent. Vulputate odio ut enim blandit volutpat maecenas. Volutpat odio facilisis mauris sit. Ut venenatis tellus in metus. Quisque sagittis purus sit amet volutpat consequat mauris. Auctor neque vitae tempus quam pellentesque nec. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Nisi lacus sed viverra tellus in hac habitasse platea. Dignissim suspendisse in est ante in nibh mauris cursus mattis. Sit amet mattis vulputate enim nulla. A erat nam at lectus urna duis convallis convallis tellus. Sed vulputate odio ut enim blandit volutpat maecenas.</p>
+    <p id="criticScore">Score Given:</p>
+    <br><br>
 
-	<form id="name">
-	<p>Enter Display Name:</p>
+    <form id="name">
+    <p>Enter Display Name:</p>
     <input type="text" id="userName" size="10"/>
     </form>
 
-	<form id="score">
+    <form id="score">
     <p>This film deserves a </p> 
     <input type="number" id="reviewScore" size="2">/10
     </form>
@@ -36,17 +49,14 @@
 
     <br><br>
     <h2>User Score:</h2>
-    <p id="userAvg"></p>
+    <h3 id="userAvg"></h3>
     <br><br>
     <h2>Comments:</h2>
-    <hr>
+    <hr id="breaker"/>
     <p id="commOne"></p>
-    <p id="commTwo"></p>
-    <p id="commThree"></p>
-    <p id="commFour"></p>
+
     <br><br>
     <button onclick="goBack()">Back</button>
-   	<a href="index.html"> Back</a>
     <script src="scripts/jquery.js"></script>
     <script src="scripts/main.js"></script>
 </body>

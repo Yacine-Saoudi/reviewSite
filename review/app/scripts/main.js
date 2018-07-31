@@ -5,6 +5,10 @@ var nameArray=[]
 var commentArray=[]
 var displayArray=[]
 var commPart=0;
+var avg=0;
+var len=0;
+var total=0;
+var total2=0;
 $("#submit").click(function()
 {
 	
@@ -12,11 +16,12 @@ $("#submit").click(function()
 
 });
 
-
+function goBack () {
+	window.history.back();
+}
 
 function Comment ()
 {
-	debugger;
 
 	var useScore=" ", useName=" ", useComment=" ";
 
@@ -26,37 +31,64 @@ function Comment ()
 	displayArray[0]=scoreArray[commPart]
 
 
-	useName=document.getElementById("name");
-	nameArray[commPart]=useName.elements["userName"].value;
-	displayArray[1]=nameArray[commPart]
+	if (displayArray[0]>=0 && displayArray[0]<=10){
+
+		useName=document.getElementById("name");
+		nameArray[commPart]=useName.elements["userName"].value;
+		displayArray[1]=nameArray[commPart]
 
 
-	useComment=document.getElementById("comment");
-	commentArray[commPart]=useComment.elements["userReview"].value;
-	displayArray[2]=commentArray[commPart]
+		useComment=document.getElementById("comment");
+		commentArray[commPart]=useComment.elements["userReview"].value;
+		displayArray[2]=commentArray[commPart]
 
 
-	commPart++
+		commPart++
+		debugger;
 
-
-	for (var j = commPart-1; j < commPart; j++) {
-		avgArray[j]=displayArray[0]
-	}
-
-	for (var i = 0; i < displayArray.length; i++) {
-		if (i==0) {
-		$("#commOne").append(displayArray[1]+" Rates this: ")
+		if (displayArray[1]=="") {
+			displayArray[1]="Anonymouse"
 		}
-		if (i!=1) {		
-			$("#commOne").append(displayArray[i]+"<br><br>")
-		}
-		else {
-			$("#commOne").append(displayArray[1]+" Says:"+"<br><br>")
+
+		for (var j = commPart-1; j < commPart; j++) {
+			avgArray[j]=displayArray[0]
 		}
 
 
-	}
+		for (var i = 0; i < displayArray.length; i++) {
+			if (i==0) {
+			$("#commOne").append(displayArray[1]+" Rates this: ")
+			}
+			if (i!=1) {		
+				$("#commOne").append(displayArray[i]+"<br><br>")
+			}
+			else {
+				if (displayArray[2]=="") {
+					$("#commOne").append(displayArray[1]+" Says Nothing")
+
+				}
+				else {
+				$("#commOne").append(displayArray[1]+" Says:"+"<br><br>")
+				}
+			}
+
+
+		}
 		$("#commOne").append("<hr>")
+		var  total=0;
+		for (var i = 0; i < avgArray.length; i++) {
+			total = Number(total) + Number(avgArray[i]);
+		avg=total/avgArray.length;
+			$("#userAvg").empty();
 
+
+		}
+
+		$("#userAvg").append(avg)
+	}
+	else{
+		displayArray[0]=""
+	}
 
 }
+

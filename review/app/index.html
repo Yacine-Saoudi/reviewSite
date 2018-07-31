@@ -2,14 +2,23 @@
 <html>
 <head>
 	<title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
 	<h1>ReviewHouse</h1>
 	<br><br>
-	<p>Nav Bar here</p>
-	<li><a href="index.html"> Home</a></li>
-	<li><a href="reviewPage2.html"> Reviews</a></li>
-	<br><br>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Movie Reviews</a>
+        <div class="dropdown-content">
+          <a href="reviewPage2.html">Incredibles 2</a>
+          <a href="reviewPage.html">Mission Impossible</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+    </ul>  
+    <br><br><br><br>
 	<p>insert image:</p>
 	<img src="img name" alt="image descrip">
 	<a href="link to review Page">Review Page</a>
