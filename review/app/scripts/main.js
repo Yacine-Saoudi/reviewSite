@@ -12,38 +12,49 @@ $("#submit").click(function()
 
 });
 
+
+
 function Comment ()
 {
 	debugger;
 
 	var useScore=" ", useName=" ", useComment=" ";
 
-	useName=document.getElementById("name");
-	nameArray[commId]=useName.elements["userName"].value;
-	displayArray[0]=nameArray[commPart]
 
 	useScore=document.getElementById("score");
-	scoreArray[commId]=useScore.elements["reviewScore"].value;
-	displayArray[1]=scoreArray[commPart]
+	scoreArray[commPart]=useScore.elements["reviewScore"].value;
+	displayArray[0]=scoreArray[commPart]
 
+
+	useName=document.getElementById("name");
+	nameArray[commPart]=useName.elements["userName"].value;
+	displayArray[1]=nameArray[commPart]
 
 
 	useComment=document.getElementById("comment");
-	commentArray[commId]=useComment.elements["userReview"].value;
+	commentArray[commPart]=useComment.elements["userReview"].value;
 	displayArray[2]=commentArray[commPart]
 
 
 	commPart++
 
 
-	commId++
-
 	for (var j = commPart-1; j < commPart; j++) {
-		avgArray[j]=displayArray[1]
+		avgArray[j]=displayArray[0]
 	}
 
 	for (var i = 0; i < displayArray.length; i++) {
-		$("#commOne").append(displayArray[i]+"<br><br>")
+		if (i==0) {
+		$("#commOne").append(displayArray[1]+" Rates this: ")
+		}
+		if (i!=1) {		
+			$("#commOne").append(displayArray[i]+"<br><br>")
+		}
+		else {
+			$("#commOne").append(displayArray[1]+" Says:"+"<br><br>")
+		}
+
+
 	}
 		$("#commOne").append("<hr>")
 
