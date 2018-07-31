@@ -29,6 +29,7 @@ function Comment ()
 	useScore=document.getElementById("score");
 	scoreArray[commPart]=useScore.elements["reviewScore"].value;
 	displayArray[0]=scoreArray[commPart]
+    document.getElementById("score").reset();
 
 
 	if (displayArray[0]>=0 && displayArray[0]<=10){
@@ -36,11 +37,14 @@ function Comment ()
 		useName=document.getElementById("name");
 		nameArray[commPart]=useName.elements["userName"].value;
 		displayArray[1]=nameArray[commPart]
+	    document.getElementById("name").reset();
 
 
 		useComment=document.getElementById("comment");
 		commentArray[commPart]=useComment.elements["userReview"].value;
 		displayArray[2]=commentArray[commPart]
+	    document.getElementById("comment").reset();
+
 
 
 		commPart++
@@ -57,18 +61,18 @@ function Comment ()
 
 		for (var i = 0; i < displayArray.length; i++) {
 			if (i==0) {
-			$("#commOne").append(displayArray[1]+" Rates this: ")
+			$("#commOne").append("<b>"+displayArray[1]+" Rates this: "+"</b>")
 			}
 			if (i!=1) {		
 				$("#commOne").append(displayArray[i]+"<br><br>")
 			}
 			else {
 				if (displayArray[2]=="") {
-					$("#commOne").append(displayArray[1]+" Says Nothing")
+					$("#commOne").append("<b>"+displayArray[1]+" Says Nothing"+"</b>")
 
 				}
 				else {
-				$("#commOne").append(displayArray[1]+" Says:"+"<br><br>")
+				$("#commOne").append("<b>"+displayArray[1]+" Says:"+"</b>"+"<br><br>")
 				}
 			}
 
