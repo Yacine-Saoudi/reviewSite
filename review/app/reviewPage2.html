@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Review Temp</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>Incredibles II</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
-    <h1>MovieName</h1>
+    <h1>Incredibles II</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
@@ -13,13 +13,18 @@
         <div class="dropdown-content">
           <a href="reviewPage2.html">Incredibles 2</a>
           <a href="reviewPage.html">Mission Impossible</a>
-          <a href="#">Link 3</a>
+          <a href="reviewPage3.html">Mama Mia</a>
         </div>
       </li>
     </ul>  
-    <br><br><br><br>
+    <br><br>
+    <form id="search">
+    <input type="text" placeholder="Search.." class="Search" id="inputField">
+    <button type="button" id="searchButt" onclick="search()">Search</button>
+    </form>
+    <br><br>
     <hr>
-    <img src="incredibles2.jpg" alt="incredibles 2 movie poster"">
+    <img src="incredibles2.jpg" alt="incredibles 2 movie poster" class="image">
     <hr>
     <p><i>blurb</i></p>
     <p>written by: (Name)</p>
@@ -35,14 +40,16 @@
     <input type="text" id="userName" size="10"/>
     </form>
 
-    <form id="score">
+    <form id="score" maxlength="2" max="2" min="0">
     <p>This film deserves a </p> 
-    <input type="number" id="reviewScore" size="2">/10
+    <input type="number" id="reviewScore" size="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "2">/10
     </form>
 
     <form id="comment">
     <p>Share your thoughts:</p>
-    <input class="comment" type="text" id="userReview" size="200"/>
+    <textarea class="comment" type="text" id="userReview" size="200"></textarea>
     </form>
 
     <button id="submit">Submit</button>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Home</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
 	<h1>ReviewHouse</h1>
@@ -12,23 +12,39 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Movie Reviews</a>
         <div class="dropdown-content">
-          <a href="reviewPage2.html">Incredibles 2</a>
-          <a href="reviewPage.html">Mission Impossible</a>
-          <a href="#">Link 3</a>
+			<a href="reviewPage2.html">Incredibles 2</a>
+			<a href="reviewPage.html">Mission Impossible</a>
+			<a href="reviewPage3.html">Mama Mia</a>
         </div>
       </li>
     </ul>  
-    <br><br><br><br>
-	<p>insert image:</p>
-	<img src="img name" alt="image descrip">
-	<a href="link to review Page">Review Page</a>
+    <br><br>
+    <form id="search">
+	<input type="text" placeholder="Search.." class="Search" id="inputField">
+	<button type="button" id="searchButt" onclick="search()">Search</button>
+	</form>
+    <br><br>
+	<h1>HOTTEST NEW MOVIES</h1>
+	<div class="field">
+	<img src="Incredibles.jpg" alt="Incredibles 2 poster" class="home">
+	<a href="reviewPage2.html">Incredibles II</a>
 	<br>
 	<br>
-	<img src="img name" alt="image descrip">
-	<a href="link to review Page">Review Page</a>
+	<img src="missionimpossible1.jpg" alt="mission impossible" class="home">
+	<a href="reviewPage.html">Mission: Impossible – Fallout</a>
 	<br>
 	<br>
-	<a href="reviewPage.html">Review Page</a>
+	<img src="mamamia.jpg" alt="Mama mia poster" class="home">
+	<a href="reviewPage3.html">Mama Mia! Here We Go Again</a>
+	<br>
+	<br>
+	<p class="first">
+	<img src="hotel.jpg" alt="Hotel Transylvania Poster" class="home">
+	<a href="reviewPage4.html">Hotel Transylvania</a>
+	</p>
+	<br>
+	<br>
+	</div>
     <script src="scripts/jquery.js"></script>
     <script src="scripts/main.js"></script>
 </body>
