@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Austin Powers: Goldmember</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+<body>
+    <h1>Austin Powers: Goldmember</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Movie Reviews</a>
+        <div class="dropdown-content">
+          <a href="reviewPage2.html">Incredibles 2</a>
+          <a href="reviewPage.html">Mission Impossible</a>
+          <a href="reviewPage3.html">Mama Mia</a>
+        </div>
+      </li>
+    </ul>  
+    <br><br>
+    <form id="search">
+    <input type="text" placeholder="Search.." class="Search" id="inputField">
+    <button type="button" id="searchButt" onclick="search()">Search</button>
+    </form>
+    <br><br>
+    <hr>
+    <img src="austinposter.jpg" alt="Austin Powers Poster" class="image">
+    <div width="100%" style="height: 500px">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iBcIAuGqOJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+    </div>
+    <hr>
+    <p><i>It's been three years since Austin Powers, that swinging international man of mystery, has faced his arch-nemesis, Dr. Evil. But after Dr. Evil and his accomplice Mini Me escape from a maximum-security prison, Austin is called to action once more in this third installment of the highly successful "Austin Powers" movie franchise.</i></p>
+    <br>
+    <p>Written by: SEAN AXMAKER</p>
+    <br>
+    <p>"Austin Powers in Goldmember" opens with a display of splash, energy, giddy self-awareness and action-movie absurdity that promises this will be the best yet: glitzy, cameo-studded credits, dancing in the streets and a musical rumble that turns America's sweetheart into the latest fem-bot.
+    <br><br>
+    Mike Myers and company just can't keep up that pace, and it's not what passes as a story that slows it down. On his third time around the spy-and-sex-spoof circuit, writer/producer/star Myers skips the story and turns the comic doodling around the edges of the film into the film itself.
+    <br><br>
+    Set the way-back machine to 1975 and the disco playground of Studio 69, where Austin's absent, estranged father, Nigel (Michael Caine doing his randy playboy spy as equal parts Harry Palmer and Alfie Elkins), has been kidnapped by the rollerboogie-ing Goldmember (Myers in his latest transformation).
+    <br><br>
+    Pop star Beyoncé Knowles falls right into the spirit of the thing in her big-screen debut as the latest power babe, '70s soul sister Foxxy Cleopatra, but the disco spoofing and blaxploitation references are a mere detour, as Austin deals with daddy issues and makes the world safe from Evil conspiracies.
+    <br><br>
+    Myers has settled into the characters of retro-hipster Austin and fey arch-foe Dr. Evil so completely that he turns their stories into a series of asides and in-jokes, while foul-and-proud-of-it henchman Fat Bastard (Myers gone sumo-sized under rolls of fleshy latex) pushes the boundaries of bathroom humor with hyperactive zeal.
+    <br><br>
+    His gold lamé Goldmember, however, is a pale straight man whose forced-accent gags and cartoony contortions make him less an outre addition to the Myers menagerie than a freckled, feckless human Muppet.
+    <br><br>
+    The overcrowding of Myers-centric characters also is starting to hinder his comedy. The zippy insanity he creates while bouncing off his co-stars simply lurches between cuts under Jay Roach's clunky editing, and lacking any driving story, the arbitrary sequence of events devolves into high-concept sketch comedy.
+    <br><br>
+    No longer a mod Carnaby Street spy spoof crashing into the new millennium, Myers has turned his franchise into the movie version of an adolescent dirty-joke book done up in post-Tarantino pop-culture riffs, a game of pushing the limits of toilet humor and sexual innuendo without losing the mighty PG-13.
+    <br><br>
+    It's often quite funny (when it's not spinning its wheels in rehashed skits and recycled gags), but when Myers gets his mojo working and his mind out of the toilet, he's capable of better.</p>
+    <h1>Score Given: 67%</h1>
+    <br><br>
+
+    <form id="name">
+    <p>Enter Display Name:</p>
+    <input type="text" id="userName" size="10"/>
+    </form>
+
+    <form id="score" maxlength="2" max="2" min="0">
+    <p>This film deserves a </p> 
+    <input type="number" id="reviewScore" size="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "2">/10
+    </form>
+
+    <form id="comment">
+    <p>Share your thoughts:</p>
+    <textarea class="comment" type="text" id="userReview" size="200"></textarea>
+    </form>
+
+    <button id="submit">Submit</button>
+
+    <br><br>
+    <h2>User Score:</h2>
+    <h3 id="userAvg"></h3>
+    <br><br>
+    <h2>Comments:</h2>
+    <hr id="breaker"/>
+    <p id="commOne"></p>
+
+    <br><br>
+    <button onclick="goBack()">Back</button>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

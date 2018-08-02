@@ -143,6 +143,14 @@ function search(){
 		result="index"
 		change();
 	}
+	else if (search=="Truman Show") {
+		result="reviewPage5";
+		change();
+	}
+	else if (search=="Austin Powers") {
+		result="reviewPage6";
+		change();
+	}
 	// if the user puts in an incorrect search term, make an alert saying the movie doesnt exist
 	else{
 		window.alert("Movie doesn't exist, try again");
