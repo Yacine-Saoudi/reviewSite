@@ -13,6 +13,7 @@
 <body>
  	<h1>Mission Impossible</h1>
     <ul>
+        <!-- dropdown nav bar (explained in index.html) -->
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Movie Reviews</a>
@@ -24,30 +25,47 @@
       </li>
     </ul>  
     <br><br>
+    <!-- search button (explained in index.html) -->
     <form id="search">
     <input type="text" placeholder="Search.." class="Search" id="inputField">
     <button type="button" id="searchButt" onclick="search()">Search</button>
     </form>
     <br><br>
  	<hr>
+    <!-- adds an image for the movie being reviewed -->
  	<img src="MissionImpossible.jpg" alt="Mission Impossible poster" class="image">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wb49-oV0F78" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
  	<hr>
-    <p><i>blurb</i></p>
- 	<p>written by: (Name)</p>
+    <!-- where a short snippet of what the movie's about will be -->
+    <p><i> The best intentions often come back to haunt you. Mission: Impossible – Fallout finds Ethan Hunt (Tom Cruise) and his IMF team (Alec Baldwin, Simon Pegg, Ving Rhames) along with some familiar allies (Rebecca Ferguson, Michelle Monaghan) in a race against time after a mission gone wrong. Henry Cavill, Angela Bassett, and Vanessa Kirby also join the dynamic cast with filmmaker Christopher McQuarrie returning to the helm</i></p>
+ 	<p>written by: PETER TRAVERS</p>
  	<br>
  	<p>
+        <!-- where the review will be, also the reviewer score -->
  	<br>
-	Luctus accumsan tortor posuere ac ut consequat semper viverra. Mi in nulla posuere sollicitudin aliquam ultrices. Suspendisse sed nisi lacus sed. Nisl pretium fusce id velit ut tortor pretium viverra suspendisse. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Pretium aenean pharetra magna ac. Turpis egestas integer eget aliquet nibh praesent. Vulputate odio ut enim blandit volutpat maecenas. Volutpat odio facilisis mauris sit. Ut venenatis tellus in metus. Quisque sagittis purus sit amet volutpat consequat mauris. Auctor neque vitae tempus quam pellentesque nec. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Nisi lacus sed viverra tellus in hac habitasse platea. Dignissim suspendisse in est ante in nibh mauris cursus mattis. Sit amet mattis vulputate enim nulla. A erat nam at lectus urna duis convallis convallis tellus. Sed vulputate odio ut enim blandit volutpat maecenas.</p>
-	<p id="criticScore">Score Given:</p>
-	<br><br>
+	If impossibly fabulous stunts are all that you want out a summer movie, Mission: Impossible – Fallout would be a dream come true for action junkies. Hell, it still is, despite a convoluted plot that makes this mission virtually impossible to follow. At 56, and so not looking it, Tom Cruise is back as IMF (Impossible Mission Force) undercover agent Ethan Hunt – and in the running, jumping, climbing, diving, flipping, fighting shape of his life. And as the last few M:I movies, that’s Cruise putting his ass on the line; witness the YouTube footage of his well-publicized ankle break he suffered while rooftop leaping. The practical effects, meaning the real stuff the computer never touched, make all the difference when you’re asking audiences to see the characters as human instead pawns in a digital game.
+    <br><br>
+    Fallout is the sixth chapter in the series and the second (after 2015’s Mission: Impossible – Rogue Nation) to be directed by  Christopher McQuarrie, who won an Oscar for his screenplay for The Usual Suspects. Your mission, should you decide to accept it, is to stop thinking about the plot as soon as possible. Faced with a parade of life-or-death challenges, Hunt likes to say, “I’ll figure it out.” He does. You may not be so lucky with McQuarrie’s script, however.
+    <br><br>
+    The basic setup: Three spheres of plutonium are missing, which means the end of the world – it always does – if the contraband gets into the wrong hands. A mystery psycho who calls himself John Lark believes that only real suffering can save what’s left of the real world. His ally in obliterating the globe is anarchist Solomon Lane (Sean Harris), the villain from the last M:I movie; he’s now sporting a beard and a fixed stare that gives him that chic nutso-Unabomber look. Hunt’s IMF chief (Alec Baldwin) wants Solomon captured, as does the head of the CIA, played by Angela Bassett. And there’s Rebecca Ferguson’s Ilsa Faust nosing around again. No one seems trustworthy, except for Ethan’s crew: tech wiz Benji (the invaluable Simon Pegg) and bomb specialist Luther (a rock-steady Ving Rhames). It’s the latter who almost blows the operation, since our hero opts to rescue him instead of the plutonium. We now have a theme: Is saving one life more important than saving the lives of millions?
+    <br><br>
+    Also: There’s fresh blood on the scene. Henry Cavill, on leave from puffing up as the DCEU’s stalwart Superman, brings unexpected twists to the role of Walker, a CIA agent assigned to watch Ethan’s every move. And best of all, there’s Vanessa Kirby (just Emmy nominated for playing Princess Margaret on The Crown) as the White Widow, a knife-wielding femme fatale with a gift for arms dealing and an eye for Ethan. Except he’s still hung up on his ex-wife (Michelle Monaghan), who’s fighting a smallpox plague in Kashmir.
+    <br><br>
+    Got that? Of course you don’t. There’s really no excuse for padding a two-and-a-half hour film with so much needless exposition. But you bear with it, because the set pieces are so off-the-charts spectacular. There’s Cruise, clearly having the time of his life, leaping over those London rooftops, putting pedal to the metal through the death-curves of Paris streets, duking it out with goons in a nightclub bathroom, skydiving out of transport plane at 25,000 feet in a lightning storm or piloting a chopper out of a death spiral that makes IMAX the preferred way to see this movie. There’s a rumor that Fallout may be the last big-screen Mission: Impossible we get. If so, then at least Cruise – who started this series of super-sized, adrenaline-fueled blockbusters 22 years ago – is going out in a blaze of glory.</p>
+    	<h1>Score Given: 80%</h1>
+    	<br><br>
 
+    <!-- where all the forms are that get the info form the user and put them as comments -->
 	<form id="name">
 	<p>Enter Display Name:</p>
     <input type="text" id="userName" size="10"/>
     </form>
 
+
 	<form id="score" maxlength="2" max="2" min="0">
     <p>This film deserves a </p> 
+    <!-- makes the max length 2 -->
     <input type="number" id="reviewScore" size="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
     type = "number"
     maxlength = "2">/10
@@ -58,17 +76,21 @@
     <textarea class="comment" type="text" id="userReview"> </textarea>
     </form>
 
+    <!-- sends out the information put in by the user -->
     <button id="submit">Submit</button>
 
     <br><br>
     <h2>User Score:</h2>
+    <!-- where the average will be displayed -->
     <h3 id="userAvg"></h3>
     <br><br>
     <h2>Comments:</h2>
-    <hr id="breaker"/>
+    <hr/>
+    <!-- where the comment section will be -->
     <p id="commOne"></p>
 
     <br><br>
+    <!-- when the back button gets clicked it does the "goBack" function -->
     <button onclick="goBack()">Back</button>
     <script src="scripts/jquery.js"></script>
     <script src="scripts/main.js"></script>
