@@ -14,5 +14,5 @@ Final project for ICS3U and will be where the movie critic site will be.
   -put "debugger;" in your javascript lines if something doesnt work and figure out the issue, if you still can't find it use your "inspect element" by right-clicking your website and finding the "console" tab where the error might be displayed.
 
 # Contributors
-Yacine Saoudi
+Yacine Saoudi(https://github.com/Yacine-Saoudi)
 Patrique Legault
